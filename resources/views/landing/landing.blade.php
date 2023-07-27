@@ -43,8 +43,8 @@
                             <h1 class="display-5 fw-bolder text-white mb-2" style="--bs-btn-font-weight: 600; letter-spacing: 0.05em;">Learn and Grow with Educatioverse</h1>
                             <p class="lead text-white-50 mb-4">Explore our wide range of online courses on various topics. Enhance your skills and knowledge!</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                                <a class="btn btn-dark btn-lg px-4 me-sm-3" href="#courses">Browse Courses</a>
-                                <a class="btn btn-outline-light btn-lg px-4" href="#!">Get Started</a>
+                                <a class="btn btn-dark btn-lg px-4 me-sm-3" href="#courses" style="font-weight: 600; letter-spacing: 0.05em;">Browse Courses</a>
+                                <a class="btn btn-outline-light btn-lg px-4" href="{{route('register')}}" style="font-weight: 600; letter-spacing: 0.05em;">Get Started</a>
                             </div>
                         </div>
                     </div>
