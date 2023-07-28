@@ -7,6 +7,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\User;
+use App\Models\Course;
 
 
 class MainController extends Controller
@@ -14,5 +16,11 @@ class MainController extends Controller
     public function viewLanding(Request $request): View
     {
         return view('landing.landing');
+    }
+    public function viewDashboard(Request $request): View
+    {
+        $courses = User::find(1)->courses()->get();
+        //dd($roles);
+        return view('dashboard')->with('courses', $courses);
     }
 }
