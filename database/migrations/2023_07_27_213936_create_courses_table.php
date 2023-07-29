@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('topic');
             $table->string('type');
+            $table->string('file_path');
             $table->integer('price');
             $table->timestamps();
         });

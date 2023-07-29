@@ -324,7 +324,7 @@
                             <!-- Submit error message-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message. Please try again.</div></div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-dark btn-lg" id="submitButton" type="submit">Send Message</button></div>
+                            <div class="d-grid"><button class="btn btn-dark btn-lg" id="submitButton" type="submit">Contact</button></div>
                         </form>
                     </div>
                 </div>

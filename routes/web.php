@@ -32,7 +32,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/dashboard', [MainController::class, 'viewDashboard'])->name('dashboard');
+
+    //SHOP
     Route::get('/shop', [ShopController::class, 'viewIndex'])->name('shop.index');
+    Route::get('/cart', [ShopController::class, 'viewCart'])->name('shop.cart');
+    Route::get('/add-to-cart/{id}', [ShopController::class, 'addToCart'])->name('shop.add.to.cart');
+    Route::patch('/update-cart', [ShopController::class, 'update'])->name('shop.update.cart');
+    Route::delete('/remove-from-cart', [ShopController::class, 'remove'])->name('shop.remove.from.cart');
+
 });
 
 require __DIR__.'/auth.php';
