@@ -33,8 +33,7 @@
                             @foreach(session('cart') as $id => $details)
                                 <div class="d-flex align-items-center p-3 border-bottom text-dark" style="--bs-btn-font-weight: 600; letter-spacing: 0.05em;">
                                     <div class="flex-shrink-0 me-2">
-                                        <!-- Replace 'far' with 'fas' or 'fal' depending on the font-awesome version you're using -->
-                                        <i class="bi bi-file-pdf fs-1"></i>
+                                        <i class="bi {{ $details['type'] === 'pdf' ? 'bi-file-pdf' : 'bi-file-play' }} fs-1"></i>
                                     </div>
                                     <div class="flex-grow-1">
                                         <p class="m-0">{{ $details['name'] }}</p>
@@ -71,6 +70,9 @@
                         <div class="col mb-5">
                             <div class="card h-100">
                                 <!-- Product image-->
+                                <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem; background-color: var(--bs-dark);" onmouseover="this.style.backgroundColor='#424649';" onmouseout="this.style.backgroundColor='var(--bs-dark)';"><a class="icon-link link-light" href="#">
+                                  <i class="bi bi-info-circle fs-6"></i>
+                                </a></div>
                                 <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                                 <!-- Product details-->
                                 <div class="card-body p-4">

@@ -42,7 +42,7 @@
                                                 <tr data-id="{{ $id }}">
                                                     <td data-th="Type">
                                                         <div class="d-flex align-items-center">
-                                                            <i class="bi bi-file-pdf fs-1"></i>
+                                                            <i class="bi {{ $details['type'] === 'pdf' ? 'bi-file-pdf' : 'bi-file-play' }} fs-1"></i>
                                                         </div>
                                                     </td>
                                                     <td data-th="Name" class="align-middle">
