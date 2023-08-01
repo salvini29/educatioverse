@@ -20,6 +20,13 @@ class ShopController extends Controller
     {
         return view('shop.shop_cart');
     }
+    public function viewDetail(Request $request): View
+    {
+        $course = Course::findOrFail($request->id);
+        $course_parsed = $course->getAttributes();
+        $relatedCourses = Course::where('topic',$course_parsed['topic'])->whereNotIn('id', [$course_parsed['id']])->inRandomOrder()->limit(4)->get();
+        return view('shop.shop_detail')->with('course',$course)->with('relatedCourses', $relatedCourses);
+    }
     public function addToCart($id)
     {
         $course = Course::findOrFail($id);
@@ -39,6 +46,28 @@ class ShopController extends Controller
           
         session()->put('cart', $cart);
         return redirect()->back()->with('success', 'Course added to cart successfully!');
+    }
+    public function addMultipleToCart(Request $request)
+    {
+        $id = $request->id;
+        $quantity = $request->quantity;
+        $course = Course::findOrFail($id);
+          
+        $cart = session()->get('cart', []);
+  
+        if(isset($cart[$id])) {
+            $cart[$id]['quantity']++;
+        } else {
+            $cart[$id] = [
+                "name" => $course->name,
+                "quantity" => $quantity,
+                "price" => $course->price,
+                "type" => $course->type
+            ];
+        }
+          
+        session()->put('cart', $cart);
+        return redirect()->route('shop.cart')->with('success', 'Course added to cart successfully!');
     }
     public function update(Request $request)
     {

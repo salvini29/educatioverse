@@ -19,8 +19,7 @@ class MainController extends Controller
     }
     public function viewDashboard(Request $request): View
     {
-        $courses = User::find(1)->courses()->get();
-        //dd($roles);
+        $courses = Auth::user()->courses()->get();
         return view('dashboard')->with('courses', $courses);
     }
 }

@@ -2,7 +2,8 @@
 
 @section('content')
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @push('styles')
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -56,7 +57,7 @@
                                                         </div>
                                                     </td>
                                                     <td data-th="Quantity" class="text-center align-middle">
-                                                        <x-text-input value="{{ $details['quantity'] }}" id="email" name="email" type="number" class="block w-full form-control quantity update-cart" required autocomplete="username" />
+                                                        <x-text-input value="{{ $details['quantity'] }}" id="quantity" name="quantity" type="number" class="block w-full form-control quantity update-cart" required/>
                                                     </td>
                                                     <td data-th="Subtotal" class="text-center align-middle text-success">${{ $details['price'] * $details['quantity'] }}</td>
                                                     <td class="actions align-middle" data-th="">
@@ -114,8 +115,17 @@
                 e.preventDefault();
                 var ele = $(this);
                 console.log("Delete button clicked!");
-
-                if (confirm("Are you sure want to remove?")) {
+                Swal.fire('Any fool can use a computer');
+                Swal.fire({
+                  title: 'Are you sure?',
+                  text: "You won't be able to revert this!",
+                  icon: 'warning',
+                  showCancelButton: true,
+                  confirmButtonColor: '#212529',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                  if (result.isConfirmed) {
                     $.ajax({
                         url: '{{ route('shop.remove.from.cart') }}',
                         method: "DELETE",
@@ -127,7 +137,8 @@
                             window.location.reload();
                         }
                     });
-                }
+                  }
+                })
             });
         });
     </script>

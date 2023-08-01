@@ -15,6 +15,8 @@ class Course extends Model
         'description',
         'topic',
         'type',
+        'file_path',
+        'img_path',
         'price'
     ];
 

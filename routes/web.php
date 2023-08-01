@@ -36,7 +36,9 @@ Route::middleware('auth')->group(function () {
     //SHOP
     Route::get('/shop', [ShopController::class, 'viewIndex'])->name('shop.index');
     Route::get('/cart', [ShopController::class, 'viewCart'])->name('shop.cart');
+    Route::get('/detail/{id}', [ShopController::class, 'viewDetail'])->name('shop.detail');
     Route::get('/add-to-cart/{id}', [ShopController::class, 'addToCart'])->name('shop.add.to.cart');
+    Route::get('/add-multiple-to-cart/{quantity}/{id}', [ShopController::class, 'addMultipleToCart'])->name('shop.add.multiple.to.cart');
     Route::patch('/update-cart', [ShopController::class, 'update'])->name('shop.update.cart');
     Route::delete('/remove-from-cart', [ShopController::class, 'remove'])->name('shop.remove.from.cart');
 

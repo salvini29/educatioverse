@@ -35,7 +35,7 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-dark py-5" style="background-image: url('img/asd.jpg'); background-size: cover; background-position: center;">
+        <header class="bg-dark py-5" style="background-image: url('img/landinglogo.jpg'); background-size: cover; background-position: center;">
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">

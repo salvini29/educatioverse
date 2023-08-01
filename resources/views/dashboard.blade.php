@@ -28,57 +28,36 @@
                         </p>
                     </header>
 
-                    <!-- Replace the following with a loop to display your purchased courses -->
-                    <div class="flex flex-wrap justify-start gap-4 mt-4">
-                        <!-- Course Card 1 -->
-                        <div class="bg-white rounded-lg shadow overflow-hidden" style="width: 18.3%;">
-                            <img src="https://via.placeholder.com/150" alt="Course Image" class="w-full h-32 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-900">Course Title 1</h3>
-                                <p class="mt-1 text-sm text-gray-600">Course Description goes here.</p>
-                                <a href="#" class="mt-2 text-sm font-medium text-indigo-600 hover:text-indigo-500">View Course</a>
+                    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center mt-5">
+                        @if (count($courses) > 0)    
+                            @foreach ($courses as $course)
+                                <div class="col mb-5">
+                                    <div class="card h-100">
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="{{$course->img_path}}"/>
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                <!-- Product name-->
+                                                <h5 class="fw-bolder">{{$course->name}}</h5>
+                                                <div class="small"> SUBJECT: <span class="text-dark">{{$course->topic}}</span></div>
+                                            </div>
+                                        </div>
+                                        <!-- Product actions-->
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"><i class="bi bi-door-open me-1"></i></i>Options</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @else
+                            <div class="text-center mt-4 mb-4">
+                                <h3 class="font-medium text-gray-900 mb-2">No purchased courses yet!</h3>
+                                <p class="text-gray-600">Visit our shop and explore a wide range of courses.</p>
+                                <a href="{{ route('shop.index') }}" class="btn btn-outline-dark mt-3">Explore Courses</a>
                             </div>
-                        </div>
-
-                        <!-- Course Card 2 -->
-                        <div class="bg-white rounded-lg shadow overflow-hidden" style="width: 18.3%;">
-                            <img src="https://via.placeholder.com/150" alt="Course Image" class="w-full h-32 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-900">Course Title 2</h3>
-                                <p class="mt-1 text-sm text-gray-600">Course Description goes here.</p>
-                                <a href="#" class="mt-2 text-sm font-medium text-indigo-600 hover:text-indigo-500">View Course</a>
-                            </div>
-                        </div>
-                        <!-- Course Card 2 -->
-                        <div class="bg-white rounded-lg shadow overflow-hidden" style="width: 18.3%;">
-                            <img src="https://via.placeholder.com/150" alt="Course Image" class="w-full h-32 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-900">Course Title 2</h3>
-                                <p class="mt-1 text-sm text-gray-600">Course Description goes here.</p>
-                                <a href="#" class="mt-2 text-sm font-medium text-indigo-600 hover:text-indigo-500">View Course</a>
-                            </div>
-                        </div>
-                                                <!-- Course Card 2 -->
-                        <div class="bg-white rounded-lg shadow overflow-hidden" style="width: 18.3%;">
-                            <img src="https://via.placeholder.com/150" alt="Course Image" class="w-full h-32 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-900">Course Title 2</h3>
-                                <p class="mt-1 text-sm text-gray-600">Course Description goes here.</p>
-                                <a href="#" class="mt-2 text-sm font-medium text-indigo-600 hover:text-indigo-500">View Course</a>
-                            </div>
-                        </div>
-                                                <!-- Course Card 2 -->
-                        <div class="bg-white rounded-lg shadow overflow-hidden" style="width: 18.3%;">
-                            <img src="https://via.placeholder.com/150" alt="Course Image" class="w-full h-32 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-900">Course Title 2</h3>
-                                <p class="mt-1 text-sm text-gray-600">Course Description goes here.</p>
-                                <a href="#" class="mt-2 text-sm font-medium text-indigo-600 hover:text-indigo-500">View Course</a>
-                            </div>
-                        </div>
-
-                        <!-- Add more course cards as needed -->
+                        @endif
                     </div>
+
                 </div>
             </div>
 
