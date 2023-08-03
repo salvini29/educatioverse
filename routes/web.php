@@ -41,7 +41,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/add-multiple-to-cart/{quantity}/{id}', [ShopController::class, 'addMultipleToCart'])->name('shop.add.multiple.to.cart');
     Route::patch('/update-cart', [ShopController::class, 'update'])->name('shop.update.cart');
     Route::delete('/remove-from-cart', [ShopController::class, 'remove'])->name('shop.remove.from.cart');
-
+    //STRIPE
+    Route::get('/pay/stripe', [ShopController::class, 'viewStripeGateway'])->name('shop.stripe.view');
+    Route::post('/pay/stripe', [ShopController::class, 'postStripePayment'])->name('shop.stripe.post');
 });
 
 require __DIR__.'/auth.php';

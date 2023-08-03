@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\Course;
+use Stripe;
 
 class ShopController extends Controller
 {
@@ -89,6 +90,59 @@ class ShopController extends Controller
             session()->flash('success', 'Course removed successfully');
         }
     }
+    //STRIPE
+    public function viewStripeGateway(Request $request): View
+    {
+        session()->put('pay_amount', $request->pay_amount);
+        return view('shop.stripe_gateway')->with('pay_amount',$request->pay_amount);
+    }
+    public function postStripePayment(Request $request)
+    {
+        Stripe\Stripe::setApiKey(config('stripe.sk'));
+      
+        /*Stripe\Charge::create ([
+                "amount" => 10 * 100,
+                "currency" => "usd",
+                "source" => $request->stripeToken,
+                "description" => "Test payment from tester." 
+        ]);
+                
+        return back()->with('success', 'Payment successful!');*/
 
+        function calculateOrderAmount(): int 
+        {
+            $total_pay = session()->get('pay_amount');
+            $order_amount = (int)$total_pay*100;
+            return $order_amount;
+        }
+
+        
+        header('Content-Type: application/json');
+
+        try {
+
+            //$jsonStr = file_get_contents('php://input');
+            //$jsonObj = json_decode($jsonStr);
+
+            $paymentIntent = Stripe\PaymentIntent::create([
+                'amount' => calculateOrderAmount(),
+                'currency' => 'usd', // Replace with your country's primary currency
+                "description" => "Course payment",
+                'automatic_payment_methods' => [
+                    'enabled' => true,
+                ],
+            ]);
+
+            $output = [
+                'clientSecret' => $paymentIntent->client_secret,
+            ];
+
+            echo json_encode($output);
+        } catch (Exception $e) {
+            return back()->with(['error' => $e->getMessage()]);
+        }
+
+
+    }
 
 }

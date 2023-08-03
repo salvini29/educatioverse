@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('shop.index')" :active="request()->routeIs('shop.index')">
                         {{ __('Shop') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('shop.index')" :active="request()->routeIs('shop.index')">
+                        {{ __('Refund') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
                         {{ __('Profile') }}
                     </x-nav-link>

@@ -74,7 +74,7 @@
                                         <tr>
                                             <td colspan="6" class="text-right">
                                                 <a href="{{ route('shop.index') }}" class="btn btn-outline-dark"><i class="bi bi-caret-left"></i> Continue Shopping</a>
-                                                <button class="btn btn-dark">Checkout</button>
+                                                <a class="btn btn-dark" href="{{ route('shop.stripe.view',  ['pay_amount' => $total]) }}"><i class="bi bi-credit-card me-2"></i>Checkout</a>
                                             </td>
                                         </tr>
                                     </tfoot>

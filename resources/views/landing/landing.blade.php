@@ -59,7 +59,7 @@
                         <div class="feature bg-dark bg-gradient text-white rounded-3 mb-3"><i class="bi bi-journal"></i></div>
                         <h2 class="h4 fw-bolder">Web Development</h2>
                         <p>Learn to build responsive and interactive websites using the latest web technologies like HTML, CSS, and JavaScript.</p>
-                        <a class="text-decoration-none" href="#!">
+                        <a class="text-decoration-none" href="{{ route('shop.index') }}">
                             Explore Course
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -68,7 +68,7 @@
                         <div class="feature bg-dark bg-gradient text-white rounded-3 mb-3"><i class="bi bi-laptop"></i></div>
                         <h2 class="h4 fw-bolder">Data Science</h2>
                         <p>Discover the power of data analysis and machine learning. Learn to work with data and extract valuable insights.</p>
-                        <a class="text-decoration-none" href="#!">
+                        <a class="text-decoration-none" href="{{ route('shop.index') }}">
                             Explore Course
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -77,7 +77,7 @@
                         <div class="feature bg-dark bg-gradient text-white rounded-3 mb-3"><i class="bi bi-pencil"></i></div>
                         <h2 class="h4 fw-bolder">Graphic Design</h2>
                         <p>Unleash your creativity and learn graphic design tools and techniques to create stunning visual content.</p>
-                        <a class="text-decoration-none" href="#!">
+                        <a class="text-decoration-none" href="{{ route('shop.index') }}">
                             Explore Course
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -256,7 +256,7 @@
                                     <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-dark fs-1"></i></div>
                                     <div class="ms-4">
                                         <p class="mb-1">Thank you for providing such high-quality courses. I have learned so much and it has helped me in my career!</p>
-                                        <div class="small text-muted">- Jane Doe, Web Developer</div>
+                                        <div class="small text-muted">- Michael Williams, Web Developer</div>
                                     </div>
                                 </div>
                             </div>
@@ -268,7 +268,7 @@
                                     <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-dark fs-1"></i></div>
                                     <div class="ms-4">
                                         <p class="mb-1">The course content was excellent, and the instructors were very knowledgeable. I highly recommend these courses!</p>
-                                        <div class="small text-muted">- John Smith, Data Scientist</div>
+                                        <div class="small text-muted">- Emily Johnson, Data Scientist</div>
                                     </div>
                                 </div>
                             </div>
@@ -332,7 +332,7 @@
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; 2023 Educatioverse</p></div>
+            <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; 2021 Educatioverse</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
