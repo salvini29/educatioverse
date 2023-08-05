@@ -89,34 +89,35 @@
         <section class="bg-light py-5 border-bottom">
             <div class="container px-5 my-5">
                 <div class="text-center mb-5">
-                    <h2 class="fw-bolder">Choose Your Plan</h2>
-                    <p class="lead mb-0">Select a plan that suits your learning needs</p>
+                    <h2 class="fw-bolder">Choose Your Course</h2>
+                    <p class="lead mb-0">Select a course that suits your learning needs</p>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <!-- Pricing card beginner-->
                     <div class="col-lg-4">
                         <div class="card mb-5 mb-lg-0">
                             <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold text-muted">Beginner</div>
+                                <div class="small text-uppercase fw-bold text-muted">Video Courses</div>
                                 <div class="mb-3">
-                                    <span class="display-4 fw-bold">$19</span>
-                                    <span class="text-muted">/ mo.</span>
+                                    <span class="text-muted">From</span>
+                                    <span class="display-4 fw-bold">$900</span>
+                                    <span class="text-muted">/ course</span>
                                 </div>
                                 <ul class="list-unstyled mb-4">
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
-                                        <strong>Access to 5 Courses</strong>
+                                        <strong>Access to course</strong>
                                     </li>
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
                                         Certificate of Completion
                                     </li>
-                                    <li class="mb-2 text-muted">
-                                        <i class="bi bi-x"></i>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
                                         Access to Downloadable Resources
                                     </li>
-                                    <li class="mb-2 text-muted">
-                                        <i class="bi bi-x"></i>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
                                         Personalized Instructor Support
                                     </li>
                                     <li class="mb-2 text-muted">
@@ -136,7 +137,7 @@
                                         Course Discussion Forums
                                     </li>
                                 </ul>
-                                <div class="d-grid"><a class="btn btn-outline-dark" href="#!">Get Started</a></div>
+                                <div class="d-grid"><a class="btn btn-outline-dark" href="{{ route('shop.index') }}">Get Started</a></div>
                             </div>
                         </div>
                     </div>
@@ -146,16 +147,17 @@
                             <div class="card-body p-5">
                                 <div class="small text-uppercase fw-bold">
                                     <i class="bi bi-star-fill text-warning"></i>
-                                    Advanced
+                                    One-on-One Courses
                                 </div>
                                 <div class="mb-3">
-                                    <span class="display-4 fw-bold">$49</span>
-                                    <span class="text-muted">/ mo.</span>
+                                    <span class="text-muted">From</span>
+                                    <span class="display-4 fw-bold">$1100</span>
+                                    <span class="text-muted">/ course</span>
                                 </div>
                                 <ul class="list-unstyled mb-4">
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
-                                        <strong>Access to 15 Courses</strong>
+                                        <strong>Access to course</strong>
                                     </li>
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
@@ -169,24 +171,24 @@
                                         <i class="bi bi-check text-primary"></i>
                                         Personalized Instructor Support
                                     </li>
-                                    <li class="mb-2 text-muted">
-                                        <i class="bi bi-x"></i>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
                                         Access to Premium Community
                                     </li>
-                                    <li class="mb-2 text-muted">
-                                        <i class="bi bi-x"></i>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
                                         Live Webinars
                                     </li>
-                                    <li class="mb-2 text-muted">
-                                        <i class="bi bi-x"></i>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
                                         Assignments and Quizzes
                                     </li>
                                     <li class="text-muted">
-                                        <i class="bi bi-x"></i>
+                                        <i class="bi bi-check text-primary"></i>
                                         Course Discussion Forums
                                     </li>
                                 </ul>
-                                <div class="d-grid"><a class="btn btn-dark" href="#!">Get Started</a></div>
+                                <div class="d-grid"><a class="btn btn-dark" href="{{ route('shop.index') }}">Get Started</a></div>
                             </div>
                         </div>
                     </div>
@@ -194,15 +196,16 @@
                     <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold text-muted">Premium</div>
+                                <div class="small text-uppercase fw-bold text-muted">Ebooks & PDF Courses</div>
                                 <div class="mb-3">
-                                    <span class="display-4 fw-bold">$99</span>
-                                    <span class="text-muted">/ mo.</span>
+                                    <span class="text-muted">From</span>
+                                    <span class="display-4 fw-bold">$800</span>
+                                    <span class="text-muted">/ course</span>
                                 </div>
                                 <ul class="list-unstyled mb-4">
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
-                                        <strong>Unlimited Access to All Courses</strong>
+                                        <strong>Access to course</strong>
                                     </li>
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
@@ -216,24 +219,24 @@
                                         <i class="bi bi-check text-primary"></i>
                                         Personalized Instructor Support
                                     </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
+                                    <li class="mb-2 text-muted">
+                                        <i class="bi bi-x"></i>
                                         Access to Premium Community
                                     </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
+                                    <li class="mb-2 text-muted">
+                                        <i class="bi bi-x"></i>
                                         Live Webinars
                                     </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
+                                    <li class="mb-2 text-muted">
+                                        <i class="bi bi-x"></i>
                                         Assignments and Quizzes
                                     </li>
                                     <li class="text-muted">
-                                        <i class="bi bi-check text-primary"></i>
+                                        <i class="bi bi-x"></i>
                                         Course Discussion Forums
                                     </li>
                                 </ul>
-                                <div class="d-grid"><a class="btn btn-outline-dark" href="#!">Get Started</a></div>
+                                <div class="d-grid"><a class="btn btn-outline-dark" href="{{ route('shop.index') }}">Get Started</a></div>
                             </div>
                         </div>
                     </div>

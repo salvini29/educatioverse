@@ -7,6 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\User;
 use App\Models\Course;
 use Stripe;
 
@@ -142,7 +143,16 @@ class ShopController extends Controller
             return back()->with(['error' => $e->getMessage()]);
         }
 
-
+    }
+    //REFUND
+    public function viewRefund(Request $request): View
+    {
+        $orders = Auth::user()->courses()->get();
+        return view('shop.refund')->with('orders',$orders);
+    }
+    public function postRefund(Request $request)
+    {
+        return redirect('dashboard')->with('success', 'Refund requested successfully!');
     }
 
 }

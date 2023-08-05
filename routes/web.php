@@ -44,6 +44,9 @@ Route::middleware('auth')->group(function () {
     //STRIPE
     Route::get('/pay/stripe', [ShopController::class, 'viewStripeGateway'])->name('shop.stripe.view');
     Route::post('/pay/stripe', [ShopController::class, 'postStripePayment'])->name('shop.stripe.post');
+    //REFUND
+    Route::get('/refund', [ShopController::class, 'viewRefund'])->name('shop.refund');
+    Route::post('/refund', [ShopController::class, 'postRefund'])->name('shop.refund.post');   
 });
 
 require __DIR__.'/auth.php';
