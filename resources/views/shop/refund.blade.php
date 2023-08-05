@@ -35,7 +35,7 @@
                             @if (count($orders) > 0) 
                                 <div>
                                     <x-input-label for="order" :value="__('Order')" class="mb-1" />
-                                    <select class="form-select" id="order" name="order" class="block w-full" required autofocus>
+                                    <select class="form-select" id="order" name="order" class="block w-full" required autofocus style="border-radius: .375rem;">
                                         @foreach ($orders as $order)
                                         <option value="{{$order->id}}">{{$order->name}}</option>
                                         @endforeach
@@ -55,7 +55,7 @@
                             @else
                                 <div>
                                     <x-input-label for="order" :value="__('Order')" class="mb-1" />
-                                    <select class="form-select" id="order" name="order" class="block w-full" required autofocus disabled>
+                                    <select class="form-select" id="order" name="order" class="block w-full" required autofocus disabled style="border-radius: .375rem;">
                                         <option value="false">You don't have Orders!</option>
                                     </select>
                                     <x-input-error class="mt-2" :messages="$errors->get('order')" />
