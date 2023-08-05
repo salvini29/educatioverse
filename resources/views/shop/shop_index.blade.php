@@ -33,7 +33,7 @@
                             @foreach(session('cart') as $id => $details)
                                 <div class="d-flex align-items-center p-3 border-bottom text-dark" style="--bs-btn-font-weight: 600; letter-spacing: 0.05em;">
                                     <div class="flex-shrink-0 me-2">
-                                        <i class="bi {{ $details['type'] === 'pdf' ? 'bi-file-pdf' : 'bi-file-play' }} fs-1"></i>
+                                        <i class="bi {{ $details['type'] === 'pdf' ? 'bi-file-pdf' : ($details['type'] === 'video' ? 'bi-file-play' : 'bi-people') }} fs-1"></i>
                                     </div>
                                     <div class="flex-grow-1">
                                         <p class="m-0">{{ $details['name'] }}</p>
