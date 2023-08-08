@@ -94,7 +94,7 @@
                                 <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem; background-color: var(--bs-dark);" onmouseover="this.style.backgroundColor='#424649';" onmouseout="this.style.backgroundColor='var(--bs-dark)';"><a class="icon-link link-light" href="{{ route('shop.detail', $relatedCourse->id) }}">
                                   <i class="bi bi-info-circle fs-6"></i>
                                 </a></div>
-                                <img class="card-img-top" src="{{ asset('img/shop/'.$course->img_path)}}" alt="..." />
+                                <img class="card-img-top" src="{{ asset('img/shop/'.$relatedCourse->img_path)}}" alt="..." />
                                 <!-- Product details-->
                                 <div class="card-body p-4">
                                     <div class="text-center">
