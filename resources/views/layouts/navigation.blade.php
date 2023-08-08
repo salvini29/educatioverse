@@ -89,6 +89,15 @@
             </div>
 
             <div class="mt-3 space-y-1">
+                <x-responsive-nav-link :href="route('dashboard')">
+                    {{ __('Dashboard') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('shop.index')">
+                    {{ __('Shop') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('shop.refund')">
+                    {{ __('Refund') }}
+                </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>

@@ -60,7 +60,7 @@
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..." /></div>
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ asset('img/details/'.$course->img_path)}}" alt="..." /></div>
                     <div class="col-md-6">
                         <div class="small mb-1">SUBJECT: {{ $course->topic }}</div>
                         <h1 class="display-5 fw-bolder">{{ $course->name }}</h1>
@@ -94,7 +94,7 @@
                                 <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem; background-color: var(--bs-dark);" onmouseover="this.style.backgroundColor='#424649';" onmouseout="this.style.backgroundColor='var(--bs-dark)';"><a class="icon-link link-light" href="{{ route('shop.detail', $relatedCourse->id) }}">
                                   <i class="bi bi-info-circle fs-6"></i>
                                 </a></div>
-                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                                <img class="card-img-top" src="{{ asset('img/shop/'.$course->img_path)}}" alt="..." />
                                 <!-- Product details-->
                                 <div class="card-body p-4">
                                     <div class="text-center">

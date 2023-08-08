@@ -14,8 +14,15 @@
         </div>
     </header>
 
-    <div class="py-12">
+    <div class="pb-12 pt-4">
+
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+
+        <div class="sm:rounded-lg mb-4" style="position: relative; width: 100%; height: 200px; overflow: hidden;">
+            <img src="{{ asset('img/banner.png') }}" class="img-fluid" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%;">
+        </div> 
+
 
             <div class="p-4 sm:p-8 bg-white shadow-sm sm:rounded-lg">
                 <div>
