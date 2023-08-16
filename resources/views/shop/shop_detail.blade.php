@@ -77,6 +77,14 @@
                                 Add to cart
                             </button>
                         </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <a href="{{ $course->file_path }}" target="_blank" class="btn btn-outline-dark pt-2 align-items-center" style="height:42px;">
+                                    <i class="bi bi-file-pdf me-1"></i>
+                                    View Syllabus
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

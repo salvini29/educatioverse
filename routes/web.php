@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\SpecialController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +33,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/dashboard', [MainController::class, 'viewDashboard'])->name('dashboard');
-
+    //NEWS
+    Route::get('/news', [MainController::class, 'viewNews'])->name('news');
+    //SPECIAL
+    Route::get('/special-payment', [SpecialController::class, 'viewSpecialPayment'])->name('special.payment');
     //SHOP
     Route::get('/shop', [ShopController::class, 'viewIndex'])->name('shop.index');
     Route::get('/cart', [ShopController::class, 'viewCart'])->name('shop.cart');

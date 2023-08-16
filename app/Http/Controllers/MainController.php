@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\User;
 use App\Models\Course;
-
+use App\Models\News;
 
 class MainController extends Controller
 {
@@ -21,5 +21,10 @@ class MainController extends Controller
     {
         $courses = Auth::user()->courses()->get();
         return view('dashboard')->with('courses', $courses);
+    }
+    public function viewNews(Request $request): View
+    {
+        $news = News::all();
+        return view('news.news')->with('news',$news);
     }
 }
