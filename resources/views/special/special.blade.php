@@ -30,22 +30,22 @@
                             </p>
                         </header>
 
-                        <form method="post" action="" class="mt-6 space-y-6">
+                        <form method="get" action="{{ route('shop.stripe.view') }}" class="mt-6 space-y-6">
                             @csrf
                             <div>
-                                <x-input-label for="order" :value="__('Order')" class="mb-1" />
-                                <x-text-input id="reason" name="reason" type="text" class="mt-1 block w-full" required autofocus autocomplete="reason" />
+                                <x-input-label for="pay_amount" :value="__('Amount')" class="mb-1" />
+                                <x-text-input id="pay_amount" name="pay_amount" type="number" class="mt-1 block w-full" required autofocus autocomplete="pay_amount" />
                                 <x-input-error class="mt-2" :messages="$errors->get('order')" />
                             </div>
 
                             <div>
-                                <x-input-label for="reason" :value="__('Reason')" />
-                                <x-text-input id="reason" name="reason" type="text" class="mt-1 block w-full" required autofocus autocomplete="reason" />
-                                <x-input-error class="mt-2" :messages="$errors->get('reason')" />
+                                <x-input-label for="desc" :value="__('Description')" />
+                                <x-text-input id="desc" name="desc" type="text" class="mt-1 block w-full" required autofocus autocomplete="desc" />
+                                <x-input-error class="mt-2" :messages="$errors->get('desc')" />
                             </div>
 
                             <div class="flex items-center gap-4">
-                                <x-primary-button>{{ __('Refund') }}</x-primary-button>
+                                <x-primary-button>{{ __('Create Payment') }}</x-primary-button>
                             </div>
                         </form>
                     </section>

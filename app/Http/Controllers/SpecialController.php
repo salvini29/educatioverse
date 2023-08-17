@@ -20,6 +20,6 @@ class SpecialController extends Controller
         if ($user->email === 'admin@admin.com') {
             return view('special.special');
         }
-        abort(403); // Access forbidden for other users
+        abort(403);
     }
 }
