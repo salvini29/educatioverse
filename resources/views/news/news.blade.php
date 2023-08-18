@@ -29,7 +29,7 @@
                                     </span>
                                 </div>
                                 <div class="mt-4 max-w-xl">
-                                    <p class="text-gray-600 fst-italic" style="word-wrap: break-word;">ASDASDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+                                    <p class="text-gray-600 fst-italic" style="word-wrap: break-word;">{{$new->body}}</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mt-4">
